@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetAPI", "SpreadsheetAPI\SpreadsheetAPI.csproj", "{3279031F-ECE7-46D4-AD2F-9ADCC0413F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetAPI.Tests", "SpreadsheetAPI.Tests\SpreadsheetAPI.Tests.csproj", "{1E25E581-26E5-4D87-BD43-7EAF0F0309C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3279031F-ECE7-46D4-AD2F-9ADCC0413F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3279031F-ECE7-46D4-AD2F-9ADCC0413F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3279031F-ECE7-46D4-AD2F-9ADCC0413F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3279031F-ECE7-46D4-AD2F-9ADCC0413F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E25E581-26E5-4D87-BD43-7EAF0F0309C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E25E581-26E5-4D87-BD43-7EAF0F0309C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E25E581-26E5-4D87-BD43-7EAF0F0309C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E25E581-26E5-4D87-BD43-7EAF0F0309C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76C3992F-6BA1-4768-BEDB-B2EE3E2B647B}
+	EndGlobalSection
+EndGlobal
