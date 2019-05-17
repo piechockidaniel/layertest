@@ -17,5 +17,10 @@ namespace SpreadsheetAPI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_RequestEnd()
+        {
+            HttpContext.Current.Items["StatusCode"] = Response.StatusCode;
+        }
     }
 }

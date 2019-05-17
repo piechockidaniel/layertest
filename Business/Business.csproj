@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78CE2538-F694-4257-9EB8-07D6E041F53D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Business</RootNamespace>
+    <AssemblyName>Business</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Data.19.1.2\lib\net452\DevExpress.Data.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Xpo.19.1.2\lib\net452\DevExpress.Xpo.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IBusinessException.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="ICommandHandler.cs" />
+    <Compile Include="ICommandHandlerDispatcher.cs" />
+    <Compile Include="IQuery.cs" />
+    <Compile Include="IQueryHandler.cs" />
+    <Compile Include="IValidationRule.cs" />
+    <Compile Include="IValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipientSelections\Commands\AddRecipientsSelections.cs" />
+    <Compile Include="RecipientSelections\Commands\AddRecipientsSelectionsHandler.cs" />
+    <Compile Include="RecipientSelections\Queries\GetRecipientsSelections.cs" />
+    <Compile Include="RecipientSelections\Queries\GetRecipientsSelectionsHandler.cs" />
+    <Compile Include="RecipientSelections\Validators\SheetTypeRule.cs" />
+    <Compile Include="Recipients\Commands\AddRecipient.cs" />
+    <Compile Include="Recipients\Commands\AddRecipientHandler.cs" />
+    <Compile Include="Recipients\Queries\GetRecipientByEmail.cs" />
+    <Compile Include="Recipients\Queries\GetRecipientByEmailHandler.cs" />
+    <Compile Include="Selections\Commands\AddSelection.cs" />
+    <Compile Include="Selections\Commands\AddSelectionHandler.cs" />
+    <Compile Include="RecipientSelections\Exceptions\SelectionWrongFormatException.cs" />
+    <Compile Include="RecipientSelections\Exceptions\SheetNameNotAllowedException.cs" />
+    <Compile Include="RecipientSelections\Validators\SheetNameRule.cs" />
+    <Compile Include="Sharings\Commands\AddSharing.cs" />
+    <Compile Include="Sharings\Commands\AddSharingHandler.cs" />
+    <Compile Include="Sharings\Queries\GetAllSharings.cs" />
+    <Compile Include="Sharings\Queries\GetAllSharingsHandler.cs" />
+    <Compile Include="Utils\RegexUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Selections\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{604f2ee4-1aad-4a4d-be15-a6c0b13fc581}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
